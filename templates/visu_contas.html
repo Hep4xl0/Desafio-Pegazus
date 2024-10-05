@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Banco</h1>
+    <h1>Lista de Contas</h1>
+    <ul>
+        {% for conta in contas %}
+            <li>Nome: {{ conta.nome }}, CPF: {{ conta.cpf }}, Saldo: R$ {{ conta.saldo }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/contas/criar">Criar Conta</a>
+    <a href="/contas/depositar">Depositar Conta</a>
+    <a href="/contas/saque">Sacar Conta</a>
+
+
+    
+</body>
+</html>
