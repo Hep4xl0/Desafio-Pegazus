@@ -2,13 +2,13 @@ from flask import Flask
 from src.routes.routes import app as routes_app
 from src.helpers.helper import carregar_contas
 
-# Create the Flask app
+#Cria o app flask para ser usado pelas rotas
 app = Flask(__name__)
 
-# Register the routes blueprint
+# REgistra as rotas do flask
 app.register_blueprint(routes_app)
 
-# Load accounts from JSON at startup
+#carrega as contas 
 carregar_contas()
 
 if __name__ == '__main__':
